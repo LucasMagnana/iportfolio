@@ -50,6 +50,7 @@
         <div class="social-links mt-3 text-center">
           <a href="https://www.instagram.com/lucasmagnana" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://fr.linkedin.com/in/lucas-magnana-4ab059118" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/LucasMagnana" class="github"><i class="bx bxl-github"></i></a>
         </div>
       </div>
 
@@ -244,7 +245,7 @@
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
               <h4>Lucas Magnana</h4>
-              <p><em>PhD student in his third year, my thesis consists in applying learning algorithms on cycling data in order to model and predict cyclists' behaviors and to try to design a new type of cycling infrastructure.</em></p>
+              <p><em>PhD student in his last year, my thesis consists in applying learning algorithms on cycling data in order to model and predict cyclists' behaviors and to try to design a new type of cycling infrastructure.</em></p>
               <ul>
                 <li>56 boulevard Niels Bohr, Villeurbanne</li>
                 <li>lucas.magnana@inria.fr</li>
@@ -252,6 +253,12 @@
             </div>
 
             <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>PhD in Computer Science</h4>
+              <h5>2020 - MARCH 2024</h5>
+              <p><em>INSA Lyon</em></p>
+              <p> I did an internship in the CITI laboratory at the end of my master's degree. Following this, I obtained funding for a PhD at INSA Lyon in this laboratory.</p>
+            </div>
             <div class="resume-item">
               <h4>Master of Computer Science</h4>
               <h5>2018 - 2020</h5>
@@ -275,25 +282,39 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>PhD Student</h4>
-              <h5>2020 - Present</h5>
+              <h4>PhD Project</h4>
+              <h5>2022 - 2023</h5>
               <p><em>CITI Laboratory, Villeurbanne </em></p>
               <ul>
-                <li>I finished my master with an internship in the CITI laboratory during which I worked with GPS tracks of cyclists on which I applied machine and deep learning algorithms.</li>
-                <li>At the end of this internship I have obtained funding for my thesis to continue my work.</li>
-                <li>This work has been published in the journal PLOS ONE and I am now extending it to the study of a new type of dynamic road infrastructure.</li>
-                <li><b>Technologies used : </b>  Python, Sklearn, Pytorch, Jupyter Notebook</li>
+                <li><b>Tools used :</b> <i>Python, Pytorch, SUMO, Deep Reinforcement Learning (3DQN, PPO)</i></li>
+                <li>I imagined a new way of making a road segment attractive to cyclists using the dynamic properties of traffic lights.</li>
+                <li>Using SUMO (Simulation of Urban MObility) and real vehicle counter data, I simulated a traffic light with green phases added specifically for cyclists. This trafic light allows cyclists to securely cross an intersection by separating their flows from the motorized vehicles.</li>  
+                <li>Naively added, these green phases for cyclists explode the waiting time of all vehicles at the intersection. </li>
+                <li>I trained deep reinforcement learning agents to control this traffic light while minimizing vehicle waiting time. The agent trained using the Dueling Dual Deep Q-Network (3DQN) outperforms other tested traffic light control methods.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Web Developer</h4>
-              <h5>April 2017 - June 2017</h5>
-              <p><em>Viveris, Villeurbanne</em></p>
+              <h4>PhD Project</h4>
+              <h5>2020 - 2022</h5>
+              <p><em>CITI Laboratory, Villeurbanne </em></p>
               <ul>
-                <li>I did a 3 months intership in Viveris. During it, I worked on a web application.</li>
+                <li><b>Tools used :</b> <i>Python, Sklearn, Pytorch, Jupyter Notebook, Recurrent Neural Networks (LSTM), Clustering algorithms (DBSCAN, K-means)</i></li>
+                <li> developped a method to create implicit route choice models for cyclists using GPS tracks. Given an origin and a destination, the models are capable of generating a route that approximates cyclists’ behavior.</li>
+                <li>The first part of this work was to find datasets of GPS tracks and to analyse them both quantitatibvely and qualitatively.</li>
+                <li>A clustering algorithm is then applied to the GPS tracks in order to find cyclists' preferred road segments.</li>                
+                <li>A LSTM network is trained to find the relevant preferred road segments from a shortest path between any pair of origin/destination.</li>              
+                <li>The relevant preferred road segments are then used to weight a road graph which is used to generate routes approximating cyclists’ behavior.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Web developer (intern)</h4>
+              <h5>APRIL 2017 - JUNE 2017</h5>
+              <p><em>Viveris, Villeurbanne </em></p>
+              <ul>
+                <li><b>Tools used :</b> <i>Angular, HTML, CSS, Typescript , Bootstrap, JEE</i></li>
+                <li>I did a 3 months intership in Viveris during which I worked on a web application.</li>
                 <li>My mission was to code a model of an old application to present it at a client to propose a reworking.</li>
-                <li>The application, developed by Viveris in 2008, is used by Schneider and enable them to optimize the working time of employees and machines.</li>
-                <li><b>Technologies used : </b>  Angular, HTML, CSS, Typescript , Bootstrap, JEE</li>
+                <li>The application, developed by Viveris in 2008, is used by Schneider and enable them to optimize the working time of employees and machines.</li>          
               </ul>
             </div>
           </div>
@@ -308,7 +329,7 @@
 
         <div class="section-title">
           <h2>Publications</h2>
-          <p>Here are the papers I wrote that have been published for now.</p>
+          <p>Here are the papers I wrote.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -316,19 +337,28 @@
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-journal">Journal</li>
-              <li data-filter=".filter-conference">Conference</li>
+              <li data-filter=".filter-preprint">Preprint</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-journal">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/paper-1.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/paper1/main.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/paper-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Implicit GPS-based bicycle route choice model using clustering methods and a LSTM network."><i class="bx bx-plus"></i></a>
-                <a href="paper-1.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/portfolio/paper1/main.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Implicit GPS-based bicycle route choice model using clustering methods and a LSTM network."><i class="bx bx-plus"></i></a>
+                <a href="paper1.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-journal">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/paper2/main.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/paper2/main.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A DRL solution to help reduce the cost in waiting time of securing a
+                traffic light for cyclists."><i class="bx bx-plus"></i></a>
+                <a href="paper2.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
