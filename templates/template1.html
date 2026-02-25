@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Template 1 - Minimal Grid + Data Viz</title>
+  <link rel="stylesheet" href="template1.css" />
+</head>
+<body>
+  <header class="hero">
+    <!-- deep-learning styled canvas behind text -->
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-inner">
+      <img src="thumbnail.jpg" alt="Profile picture" class="profile-pic" />
+      <div class="intro">
+        <h1>Firstname Lastname</h1>
+        <p>Deep learning research engineer – building LLMs &amp; neural models</p>
+        <p class="bio">I'm a research engineer exploring large language models, neural architectures and applied AI. Passionate about open science and clean code.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="skills">
+      <h2>Skills &amp; Tools</h2>
+      <ul class="skill-bars">
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <span class="bar" data-level="90%"></span>
+        </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">PyTorch</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <span class="bar" data-level="85%"></span>
+        </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">LLMs / Transformers</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <span class="bar" data-level="80%"></span>
+        </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">Data Visualization</span>
+            <span class="skill-percent">70%</span>
+          </div>
+          <span class="bar" data-level="70%"></span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="timeline">
+         <div class="entry">
+          <span class="year">2024</span>
+          <p>PhD in Computer Science<br />University A</p>
+        </div>
+        <div class="entry">
+          <span class="year">2022</span>
+          <p>M.Sc. in Computer Science<br />University A</p>
+        </div>
+        <div class="entry">
+          <span class="year">2019</span>
+          <p>B.Sc. in Software Engineering<br />University B</p>
+        </div>
+        <div class="entry">
+          <span class="year">2015</span>
+          <p>High School Diploma<br />School C</p>
+        </div>
+      </div>
+    </section>
+
+<section class="projects">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="more">Extended description for project one. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Nunc consequat sapien nec magna convallis, sed lacinia sapien.</p>
+          <div class="more">Extra details about project two. Nunc consequat sapien nec magna convallis, sed lacinia sapien.</div>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Ut gravida metus eget enim viverra, vitae tempor metus interdum.</p>
+          <div class="more">More information on project three. Ut gravida metus eget enim viverra, vitae tempor metus interdum.</div>
+        </article>
+        <article class="card">
+          <h3>Project Four</h3>
+          <p>Sed sollicitudin urna quis arcu finibus, vitae convallis odio euismod.</p>
+          <div class="more">Details for project four. Sed sollicitudin urna quis arcu finibus, vitae convallis odio euismod.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 Firstname Lastname</p>
+    <canvas id="net" width="300" height="80"></canvas>
+  </footer>
+
+  <script src="template1.js"></script>
+</body>
+</html>
