@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Template 1 - Minimal Grid + Data Viz</title>
+  <title>Lucas Magnana</title>
   <link rel="stylesheet" href="template1.css" />
 </head>
 <body>
@@ -13,37 +13,44 @@
     <div class="hero-inner">
       <img src="thumbnail.jpg" alt="Profile picture" class="profile-pic" />
       <div class="intro">
-        <h1>Firstname Lastname</h1>
-        <p>Deep learning research engineer – building LLMs &amp; neural models</p>
-        <p class="bio">I'm a research engineer exploring large language models, neural architectures and applied AI. Passionate about open science and clean code.</p>
-      </div>
+        <h1>Lucas Magnana</h1>
+        <p>Deep learning research engineer</p>
+        <p class="bio">I completed my PhD at INSA Lyon in February 2024. Since then, I have been working as a research engineer at INRIA, focusing on large language models. The team I'm working in investigates the security of neural networks, particularly the identification of model vulnerabilities, the design and evaluation of attacks, and the analysis of sensitive data leakage risks.</p>
     </div>
   </header>
 
   <main>
     <section class="skills">
-      <h2>Skills &amp; Tools</h2>
+      <h1>Skills &amp; Tools</h1>
+      <p>I started coding in middle school and continued to refine my skills throughout my scholar and professional journey. I am now able to develop in Python, Java, and C++. I chose to specialize in artificial intelligence during the last year of my master's program, and I've been exploring and applying the many dimensions of this this exciting research domain ever since.</p>
       <ul class="skill-bars">
         <li>
           <div class="skill-header">
-            <span class="skill-name">Python</span>
-            <span class="skill-percent">90%</span>
-          </div>
-          <span class="bar" data-level="90%"></span>
-        </li>
-        <li>
-          <div class="skill-header">
-            <span class="skill-name">PyTorch</span>
+            <span class="skill-name">LLMs / Transformers</span>
             <span class="skill-percent">85%</span>
           </div>
           <span class="bar" data-level="85%"></span>
         </li>
         <li>
           <div class="skill-header">
-            <span class="skill-name">LLMs / Transformers</span>
+            <span class="skill-name">Deep Learning</span>
             <span class="skill-percent">80%</span>
           </div>
           <span class="bar" data-level="80%"></span>
+        </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-percent">95%</span>
+          </div>
+          <span class="bar" data-level="95%"></span>
+        </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">PyTorch</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <span class="bar" data-level="90%"></span>
         </li>
         <li>
           <div class="skill-header">
@@ -52,53 +59,153 @@
           </div>
           <span class="bar" data-level="70%"></span>
         </li>
+        <li>
+          <div class="skill-header">
+            <span class="skill-name">Machine Learning</span>
+            <span class="skill-percent">65%</span>
+          </div>
+          <span class="bar" data-level="65%"></span>
+        </li>
       </ul>
     </section>
 
-    <section class="education">
-      <h2>Education</h2>
-      <div class="timeline">
-         <div class="entry">
-          <span class="year">2024</span>
-          <p>PhD in Computer Science<br />University A</p>
+
+    <!-- ======= Resume Section (replaces education timeline) ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Detailed Resume</h1>
         </div>
-        <div class="entry">
-          <span class="year">2022</span>
-          <p>M.Sc. in Computer Science<br />University A</p>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="resume-column">
+            <h2 class="resume-title">Research Engineer</h2>
+            <div class="resume-item">
+              <h4>Involvment in PANAME and NoLeFa projects</h4>
+              <h5><span class="year">SEPTEMBER 2025 - TODAY</span></h5>
+              <p><em>CITI Laboratory (PRIVATICS Team), Villeurbanne </em></p>
+              <ul>
+                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers</i></li>
+                <li>In parallel with my research activities, I contribute to the French PANAME project.</li>
+                <li>Established through a collaboration between INRIA, CNIL, PEReN, and ANSSI, PANAME (Privacy Auditing of AI Models) aims to develop a standardized library for auditing model privacy. The objective is to enable organizations training models on sensitive data to easily conduct attacks and evaluate associated privacy risks.</li>
+                <li>Together with another research engineer, I am responsible for developing the LLM module of the library. This includes designing model wrappers, implementing privacy attacks, and producing example scripts as well as unit and functional tests.</li>
+                <li class="link"><b><a href="https://www.cnil.fr/fr/paname-un-partenariat-pour-laudit-de-la-confidentialite-des-modeles-dia">Link of the project presentation</a> (in french)</b></li>
+                <br>
+                <li>I am also involved in Work Package 2 (WP2) of the European project NoLeFa. WP2 focuses on developing an AI testing suite to support compliance with the AI Act, including assessments of robustness, fairness, and training data quality.</li>
+                <li>The project is currently at an early stage, and I am working on an initial use case involving a re-identification attack on a LLM trained on medical data.</li>
+                <li class="link"><b><a href="https://nolefa.eu/">Link of the project</a></b></li>
+
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Research Engineer</h4>
+              <h5><span class="year">JUNE 2024 - TODAY<span></h5>
+              <p><em>CITI Laboratory (PRIVATICS Team), Villeurbanne </em></p>
+              <ul>
+                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers, Opacus, Machine Unlearning</i></li>
+                <li>My work investigates sensitive data leakage and adversarial vulnerabilities in LLMs, with a particular focus on medical use cases.</li>
+                <li>We first developed a Privacy-Preserving Language Modeling (PPLM) training strategy designed to prevent models from learning both direct and indirect identifiers. For masked language models (MLMs), we prohibit the masking of identifiers during finetuning. For causal language models (CLMs), identifiers are replaced with padding tokens that are excluded from loss computation.</li>
+                <li>Compared to both protected and unprotected baselines (models trained on anonymized data and models trained using differential privacy), our approach achieves the best utility-privacy trade-off.</li>
+                <li class="link"><b><a href="https://arxiv.org/abs/2501.02407">Link of the preprint</a></b></li>
+                <br>
+                <li>Building on this, we explored multiple unlearning techniques, integrating PPLM into the reconstruction phase to improve the safety of models originally finetuned without privacy safeguards. Remarkably, retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected training.</li>
+                <li>We showed that retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected finetuning.</li>
+                <li class="link"><b><a href="https://arxiv.org/abs/2510.21322">Link of the preprint</a></b></li>
+                <br>
+                <li>I also contributed to a study examining the relationship between privacy risks and model language.</li>
+                <li>I was responsible for implementing all experimental risk assessments, including data extraction attacks, counterfactual memorization evaluations, and membership inference attacks.</li>
+                <li class="link"><b><a href="https://hal.science/hal-05475921/">Link of the paper</a></b></li>
+              </ul>
+            </div>
+            </div><!-- .resume-column -->
+          </div>
+          <div class="col-lg-6">
+            <div class="resume-column">
+            <h2 class="resume-title">PhD Student</h2>
+            <div class="resume-item">
+              <h4>PhD Project</h4>
+              <h5><span class="year">2022 - 2023</span></h5>
+              <p><em>CITI Laboratory (PRIVATICS Team), Villeurbanne </em></p>
+              <ul>
+                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, SUMO, Deep Reinforcement Learning (3DQN, PPO)</i></li>
+                <li>I imagined a new way of making a road segment attractive to cyclists using the dynamic properties of traffic lights.</li>
+                <li>Using SUMO (Simulation of Urban MObility) and real vehicle counter data, I simulated a traffic light with green phases added specifically for cyclists. This trafic light allows cyclists to securely cross an intersection by separating their flows from the motorized vehicles.</li>
+                <li>Naively added, these green phases for cyclists explode the waiting time of all vehicles at the intersection. </li>
+                <li>I trained deep reinforcement learning agents to control this traffic light while minimizing vehicle waiting time. The agent trained using the Dueling Dual Deep Q-Network (3DQN) outperforms other tested traffic light control methods.</li>
+                <li class="link"><b><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264196">Link of the paper</a></b></li>
+
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>PhD Project</h4>
+              <h5><span class="year">2020 - 2022</span></h5>
+              <p><em>CITI Laboratory, Villeurbanne </em></p>
+              <ul>
+                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, Sklearn, Jupyter Notebook, Recurrent Neural Networks (LSTM), Clustering algorithms (DBSCAN, K-means)</i></li>
+                <li>I developped a method to create implicit route choice models for cyclists using GPS tracks. Given an origin and a destination, the models are capable of generating a route that approximates cyclists’ behavior.</li>
+                <li>The first part of this work was to find datasets of GPS tracks and to analyse them both quantitatibvely and qualitatively.</li>
+                <li>A clustering algorithm is then applied to the GPS tracks in order to find cyclists' preferred road segments.</li>                
+                <li>A LSTM network is trained to find the relevant preferred road segments from a shortest path between any pair of origin/destination.</li>              
+                <li>The relevant preferred road segments are then used to weight a road graph which is used to generate routes approximating cyclists’ behavior.</li>
+                <li class="link"><b><a href="https://www.sciencedirect.com/science/article/pii/S2950105924000378">Link of the paper</a></b></li>
+              </ul>
+            </div>
+            </div><!-- .resume-column -->
+          </div>
+          <div class="col-lg-6">
+            <div class="resume-column">
+            <h2 class="resume-title">Education</h2>
+            <div class="resume-item">
+              <h4>PhD in Computer Science</h4>
+              <h5><span class="year">October 2020 - February 2024</span></h5>
+              <p><em>INSA Lyon</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Master of Computer Science</h4>
+              <h5><span class="year">2018 - 2020</span></h5>
+              <p><em>University of Lyon</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Computer Science</h4>
+              <h5><span class="year">2017 - 2018</span></h5>
+              <p><em>University of Lyon</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>UIT in Computer Science</h4>
+              <h5><span class="year">2015 - 2017</span></h5>
+              <p><em>University of Lyon</em></p>
+            </div>
+            </div><!-- .resume-column -->
+          </div>
         </div>
-        <div class="entry">
-          <span class="year">2019</span>
-          <p>B.Sc. in Software Engineering<br />University B</p>
-        </div>
-        <div class="entry">
-          <span class="year">2015</span>
-          <p>High School Diploma<br />School C</p>
-        </div>
+
       </div>
-    </section>
+    </section><!-- End Resume Section -->
 
 <section class="projects">
-      <h2>Selected Work</h2>
+      <h1>Selected Work</h1>
       <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="more">Extended description for project one. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <article onclick="window.location='https://github.com/LucasMagnana/DRL_implementations'" class="card">
+          <h2>Implementation of DRL algorithms</h2>
+          <p>Motivated by a strong interest in Deep Reinforcement Learning, I implemented a selection of well-known DRL algorithms on my own time to better understand their theoretical foundations and practical behavior.</p>
         </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Nunc consequat sapien nec magna convallis, sed lacinia sapien.</p>
-          <div class="more">Extra details about project two. Nunc consequat sapien nec magna convallis, sed lacinia sapien.</div>
+        <article onclick="window.location='https://github.com/LucasMagnana/AI4BioMed'" class="card">
+          <h2>AI4BioMed</h2>
+          <p>I participated in the 2025 AI4BioMed Spring School, where I implemented a protein contact prediction model that infers contact matrices directly from protein sequences. The approach relies on ESM to generate contextualized amino acid embeddings used as input features.</p>
         </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>Ut gravida metus eget enim viverra, vitae tempor metus interdum.</p>
-          <div class="more">More information on project three. Ut gravida metus eget enim viverra, vitae tempor metus interdum.</div>
+        <article onclick="window.location='https://github.com/LucasMagnana/Pictalk_PrAACT'" class="card">
+          <h2>Implementation of the PrAACT method for Pictalk</h2>
+          <p>I implemented an LLM-based pictogram prediction system to assist friends in building an application aimed at improving communication accessibility for non-verbal users.</p>
         </article>
-        <article class="card">
-          <h3>Project Four</h3>
-          <p>Sed sollicitudin urna quis arcu finibus, vitae convallis odio euismod.</p>
-          <div class="more">Details for project four. Sed sollicitudin urna quis arcu finibus, vitae convallis odio euismod.</div>
+        <article onclick="window.location='https://github.com/LucasMagnana/Implicit-GPS-based-bicycle-route-choice-model'" class="card">
+          <h2>Paper code</h2>
+          <p>Code for the paper <i>GPS-based bicycle route choice model using clustering methods and a LSTM network</i>.</p>
+        </article>
+        <article onclick="window.location='https://github.com/LucasMagnana/A-DRL-solution-to-help-reduce-the-cost-in-waiting-time-of-securing-a-traffic-light-for-cyclists'" class="card">
+          <h2>Paper code</h2>
+          <p>Code for the paper <i>A DRL solution to help reduce the cost in waiting time of securing a traffic light for cyclists</i>.</p>
         </article>
       </div>
     </section>
@@ -106,7 +213,7 @@
 
 
   <footer>
-    <p>&copy; 2026 Firstname Lastname</p>
+    <p>&copy; 2026 Lucas Magnana</p>
     <canvas id="net" width="300" height="80"></canvas>
   </footer>
 

@@ -1,4 +1,17 @@
 // reveal cards on scroll
+const res_col = document.querySelectorAll('.resume-column');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+// observe cards only
+res_col.forEach(c => obs.observe(c));
+
+// reveal cards on scroll
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -10,19 +23,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 // observe cards only
 cards.forEach(c => observer.observe(c));
-
-// card click -> expand/collapse only that card (close others)
-cards.forEach(c=>{
-  c.addEventListener('click', (e) => {
-    // collapse all other cards first
-    cards.forEach(x=>{
-      if(x !== c) x.classList.remove('expanded');
-    });
-    // toggle clicked one
-    const now = c.classList.toggle('expanded');
-    console.log('card click', c.querySelector('h3').textContent, 'expanded?', now);
-  });
-});
 
 // animate skill bars when section visible
 const skillsSection = document.querySelector('.skills');
@@ -56,56 +56,6 @@ if (eduEntries.length) {
   eduEntries.forEach(e => obsEdu.observe(e));
 }
 
-// draw a continuous line for each row of the timeline
-function updateTimelineLines() {
-  const container = document.querySelector('.timeline');
-  if (!container) return;
-  // remove previous lines
-  container.querySelectorAll('.timeline-line').forEach(el => el.remove());
-
-  const entries = Array.from(container.querySelectorAll('.entry'));
-  const seen = new Set();
-  // group entries by their top position (row)
-  const rows = {};
-  entries.forEach(e => {
-    const style = window.getComputedStyle(e);
-    const marginTop = parseFloat(style.marginTop) || 0;
-    const top = e.offsetTop - marginTop;
-    if (!rows[top]) rows[top] = [];
-    rows[top].push(e);
-  });
-  Object.entries(rows).forEach(([topStr, elems]) => {
-    const top = parseFloat(topStr);
-    // find leftmost and rightmost edges of entries in this row
-    let minLeft = Infinity;
-    let maxRight = -Infinity;
-    elems.forEach(e => {
-      const rect = e.getBoundingClientRect();
-      // convert from viewport coordinates to container coordinates
-      const containerRect = container.getBoundingClientRect();
-      const left = rect.left - containerRect.left;
-      const right = left + rect.width;
-      minLeft = Math.min(minLeft, left);
-      maxRight = Math.max(maxRight, right);
-    });
-    if (minLeft < maxRight) {
-      const line = document.createElement('div');
-      line.className = 'timeline-line';
-      // draw the line exactly at the entry top; entry has padding-top so the
-      // year/text starts below the line and the dot (which is centred on the
-      // top via CSS) will align perfectly.
-      line.style.top = top + 'px';
-      line.style.left = minLeft + 'px';
-      line.style.width = (maxRight - minLeft) + 'px';
-      container.appendChild(line);
-    }
-  });
-}
-window.addEventListener('resize', updateTimelineLines);
-// run once after DOM load
-window.addEventListener('load', updateTimelineLines);
-// also when images/fonts change size
-updateTimelineLines();
 
 // hero canvas deep‑learning animation
 (function(){
