@@ -2,6 +2,12 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+h5 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
 
 /* two-column vertical timelines */
 .resume-column {
@@ -102,11 +108,43 @@ body {
   position: relative; /* keep above svg */
   z-index: 1;
 }
+.me{
+  width: 200px;
+  height: 250px;
+  margin: 0 2rem 1rem 0;
+}
+@media all and (max-width: 765px) {
+    .me {margin: 0 0 0 0;}
+}
+.link-bubbles{
+  width: 200px;
+  height: 50px;
+
+}
+.link-bubbles a {
+  display: inline-block;
+  background: #2d3a4a;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin: 2px 5px 0 5px;
+  border-radius: 50%;
+  text-align: center;
+  width: 45px;
+  height: 30px;
+  transition: 0.3s;
+}
+.link-bubbles a:hover{
+  background: #4b5c6b;
+}
+.link-bubbles svg {
+  margin-top: 2px;
+}
 .profile-pic {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  margin: 0 2rem 1rem 0;
+  margin: 0 2rem 0rem 0;
   flex-shrink: 0;
 }
 .intro {
@@ -142,13 +180,65 @@ body {
 /* skills bars */
 .skills {
   padding: 2rem 10vw; /* horizontal margins adapt with viewport width */
-  background: #f5f5f5;
+  background: #ffff;
 }
 
 /* education timeline */
-.education {
+.keys {
   padding: 2rem 10vw;
-  background: #fff; /* differentiate from skills */
+  background: #f5f5f5;; /* differentiate from skills */
+}
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 0; /* minimal spacing above/below rows */
+}
+/* absolute lines drawn per row so gaps don't break the connection */
+.timeline .timeline-line {
+  position: absolute;
+  /* width and left are set dynamically in JS */
+  height: 2px;
+  background: #ddd;
+  z-index: 0;
+}
+
+.timeline .entry {
+  position: relative;
+  flex: 1 1 150px;
+  max-width: 300px;
+  margin: 10px; /* spacing above entries */
+  padding: 1rem 1rem 0; /* add top padding so there&rsquo;s room above the year for the dot/line */
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  transition: opacity .8s, transform 1.2s;
+  transform: translateX(-20px);
+  position: relative;
+}
+.timeline .entry.visible:hover {
+  transform: translateY(-5px);
+}
+.timeline .entry h4{
+  margin: 0 0 0 0;
+}
+.timeline .entry p{
+  margin-top: 0;
+}
+
+.timeline .entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline .entry .year {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
 .year {
@@ -180,12 +270,7 @@ body {
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
 }
-.resume-item h5 {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-  margin-top: 0rem;
-}
+
 .resume-item p {
   margin: 0.3rem 0;
 }
@@ -215,7 +300,7 @@ body {
 }
 @media(max-width:800px){
   .skills,
-  .education,
+  .keys,
   .projects { padding:2rem 5vw; }
 }
 /* two columns of skills across full width */

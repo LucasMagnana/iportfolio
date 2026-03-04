@@ -42,8 +42,8 @@ if (skillsSection) {
   obsSkills.observe(skillsSection);
 }
 
-// reveal education timeline entries when they scroll into view
-const eduEntries = document.querySelectorAll('.education .entry');
+// reveal career keys timeline entries when they scroll into view
+const eduEntries = document.querySelectorAll('.keys .entry');
 if (eduEntries.length) {
   const obsEdu = new IntersectionObserver(entries => {
     entries.forEach(e => {
