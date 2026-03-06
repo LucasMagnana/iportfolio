@@ -308,8 +308,6 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  column-count: 2;
-  column-gap: 2rem;
 }
 
 /* ensure projects section padding consistent as before */
@@ -380,6 +378,22 @@ body {
   cursor: pointer;
   position: relative;
 }
+.card .titlog {
+  width: 100%;
+}
+.card h2 {
+  margin: 0 0 0 0;
+  max-width: 80%;
+}
+.card svg {
+  position:fixed;
+  right:0%;
+  top:0%;
+  width: 33px;
+  height: 33px;
+  padding: 1em 1em 1em 1em;
+}
+
 .card::after {
   content: '\2192'; /* right arrow */
   position: absolute;
@@ -407,6 +421,7 @@ body {
 .card:hover {
   transform: rotateY(10deg) scale(1.03);
 }
+
 footer {
   text-align:center;
   padding:1rem;
