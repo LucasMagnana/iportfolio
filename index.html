@@ -139,44 +139,52 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="resume-column">
-            <h2 class="resume-title">Research Engineer</h2>
-            <div class="resume-item">
-              <h4>Involvment in PANAME and NoLeFa projects</h4>
-              <h5><span class="year">SEPTEMBER 2025 - TODAY</span></h5>
-              <p><em>Inria (CITI Laboratory, PRIVATICS team), Villeurbanne</em></p>
-              <ul>
-                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers</i></li>
-                <li>In parallel with my research activities, I contribute to the French PANAME project.</li>
-                <li>Established through a collaboration between INRIA, CNIL, PEReN, and ANSSI, PANAME (Privacy Auditing of AI Models) aims to develop a standardized library for auditing model privacy. The objective is to enable organizations training models on sensitive data to easily conduct attacks and evaluate associated privacy risks.</li>
-                <li>Together with another research engineer, I am responsible for developing the LLM module of the library. This includes designing model wrappers, implementing privacy attacks, and producing example scripts as well as unit and functional tests.</li>
-                <li class="link"><b><a href="https://www.cnil.fr/fr/paname-un-partenariat-pour-laudit-de-la-confidentialite-des-modeles-dia">Link of the project presentation</a> (in french)</b></li>
-                <br>
-                <li>I am also involved in Work Package 2 (WP2) of the European project NoLeFa. WP2 focuses on developing an AI testing suite to support compliance with the AI Act, including assessments of robustness, fairness, and training data quality.</li>
-                <li>The project is currently at an early stage, and I am working on an initial use case involving a re-identification attack on a LLM trained on medical data.</li>
-                <li class="link"><b><a href="https://nolefa.eu/">Link of the project</a></b></li>
+              <h2 class="resume-title">Research Engineer</h2>
+              <div class="resume-item">
+                <h4>Involvment in PANAME and NoLeFa projects</h4>
+                <h5><span class="year">SEPTEMBER 2025 - TODAY</span></h5>
+                <p><em>Inria (CITI Laboratory, PRIVATICS team), Villeurbanne</em></p>
+                <ul>
+                  <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers</i></li>
+                  <li>In parallel with my research activities, I contribute to the French PANAME project.</li>
+                  <li>Established through a collaboration between INRIA, CNIL, PEReN, and ANSSI, PANAME (Privacy Auditing of AI Models) aims to develop a standardized library for auditing model privacy. The objective is to enable organizations training models on sensitive data to easily conduct attacks and evaluate associated privacy risks.</li>
+                  <li>Together with another research engineer, I am responsible for developing the LLM module of the library. This includes designing model wrappers, implementing privacy attacks, and producing example scripts as well as unit and functional tests.</li>
+                  <li class="link"><b><a href="https://www.cnil.fr/fr/paname-un-partenariat-pour-laudit-de-la-confidentialite-des-modeles-dia">Link of the project presentation</a> (in french)</b></li>
+                  <br>
+                  <li>I am also involved in Work Package 2 (WP2) of the European project NoLeFa. WP2 focuses on developing an AI testing suite to support compliance with the AI Act, including assessments of robustness, fairness, and training data quality.</li>
+                  <li>The project is currently at an early stage, and I am working on an initial use case involving a re-identification attack on a LLM trained on medical data.</li>
+                  <li class="link"><b><a href="https://nolefa.eu/">Link of the project</a></b></li>
 
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Research Engineer</h4>
-              <h5><span class="year">JUNE 2024 - TODAY<span></h5>
-              <p><em>Inria (CITI Laboratory, PRIVATICS team), Villeurbanne</em></p>
-              <ul>
-                <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers, Opacus, Machine Unlearning</i></li>
-                <li>My work investigates sensitive data leakage and adversarial vulnerabilities in LLMs, with a particular focus on medical use cases.</li>
-                <li>We first developed a Privacy-Preserving Language Modeling (PPLM) training strategy designed to prevent models from learning both direct and indirect identifiers. For masked language models (MLMs), we prohibit the masking of identifiers during finetuning. For causal language models (CLMs), identifiers are replaced with padding tokens that are excluded from loss computation.</li>
-                <li>Compared to both protected and unprotected baselines (models trained on anonymized data and models trained using differential privacy), our approach achieves the best utility-privacy trade-off.</li>
-                <li class="link"><b><a href="https://arxiv.org/abs/2501.02407">Link of the preprint</a></b></li>
-                <br>
-                <li>Building on this, we explored multiple unlearning techniques, integrating PPLM into the reconstruction phase to improve the safety of models originally finetuned without privacy safeguards. Remarkably, retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected training.</li>
-                <li>We showed that retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected finetuning.</li>
-                <li class="link"><b><a href="https://arxiv.org/abs/2510.21322">Link of the preprint</a></b></li>
-                <br>
-                <li>I also contributed to a study examining the relationship between privacy risks and model language.</li>
-                <li>I was responsible for implementing all experimental risk assessments, including data extraction attacks, counterfactual memorization evaluations, and membership inference attacks.</li>
-                <li class="link"><b><a href="https://hal.science/hal-05475921/">Link of the paper</a></b></li>
-              </ul>
-            </div>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Research Engineer</h4>
+                <h5><span class="year">JUNE 2024 - TODAY<span></h5>
+                <p><em>Inria (CITI Laboratory, PRIVATICS team), Villeurbanne</em></p>
+                <ul>
+                  <li class="tools"><b>Tools used :</b> <i>Python, PyTorch, HuggingFace, Transformers, Opacus, Machine Unlearning</i></li>
+                  <li>My work investigates sensitive data leakage and adversarial vulnerabilities in LLMs, with a particular focus on medical use cases.</li>
+                  <li>We first developed a Privacy-Preserving Language Modeling (PPLM) training strategy designed to prevent models from learning both direct and indirect identifiers. For masked language models (MLMs), we prohibit the masking of identifiers during finetuning. For causal language models (CLMs), identifiers are replaced with padding tokens that are excluded from loss computation.</li>
+                  <li>Compared to both protected and unprotected baselines (models trained on anonymized data and models trained using differential privacy), our approach achieves the best utility-privacy trade-off.</li>
+                  <li class="link"><b><a href="https://arxiv.org/abs/2501.02407">Link of the preprint</a></b></li>
+                  <br>
+                  <li>Building on this, we explored multiple unlearning techniques, integrating PPLM into the reconstruction phase to improve the safety of models originally finetuned without privacy safeguards. Remarkably, retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected training.</li>
+                  <li>We showed that retraining for only 10-20% of the original finetuning duration was sufficient to reach a utility-privacy trade-off comparable to fully protected finetuning.</li>
+                  <li class="link"><b><a href="https://arxiv.org/abs/2510.21322">Link of the preprint</a></b></li>
+                  <br>
+                  <li>I also contributed to a study examining the relationship between privacy risks and model language.</li>
+                  <li>I was responsible for implementing all experimental risk assessments, including data extraction attacks, counterfactual memorization evaluations, and membership inference attacks.</li>
+                  <li class="link"><b><a href="https://hal.science/hal-05475921/">Link of the paper</a></b></li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Teaching</h4>
+                <h5><span class="year">SEPTEMBER 2025 - TODAY<span></h5>
+                <p><em>INSA Lyon</em></p>
+                <ul>
+                  <li>I’m pleased to currently teach the basics of algorithmic to first year students at INSA Lyon.</li>
+                </ul>
+              </div>
             </div><!-- .resume-column -->
           </div>
           <div class="col-lg-6">
@@ -194,6 +202,14 @@
                 <li>I trained deep reinforcement learning agents to control this traffic light while minimizing vehicle waiting time. The agent trained using the Dueling Dual Deep Q-Network (3DQN) outperforms other tested traffic light control methods.</li>
                 <li class="link"><b><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264196">Link of the paper</a></b></li>
 
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Teaching</h4>
+              <h5><span class="year">SEPTEMBER 2021 - JANUAY 2022<span></h5>
+              <p><em>INSA Lyon</em></p>
+              <ul>
+                <li>I’ve had the pleasure to teach for 1 semester the basics of algorithmic to first year students at INSA Lyon.</li>
               </ul>
             </div>
             <div class="resume-item">
